@@ -9,7 +9,7 @@ let themperateSchema = mongoose.Schema(
             type: String,
         },
         altitude: {
-            type: Number,
+            type: String,
         }
     },
     { timestamps: true }
