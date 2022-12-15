@@ -3,7 +3,7 @@ const Categories = require('./model');
 const index = async (req, res, next) => {
     try {
 
-    const resault = await Categories.find().select(' _id name ');
+    const resault = await Categories.find().select(' _id name age');
     res.status(200).json({
         data: resault
     });
@@ -16,9 +16,9 @@ const index = async (req, res, next) => {
 const create = async (req, res, next) => {
     try {
 
-     const { name } = req.body;
+     const { name, age } = req.body;
     
-     const result = await Categories.create({ name });
+     const result = await Categories.create({ name, age});
      res.status(201).json({
         result
      });
